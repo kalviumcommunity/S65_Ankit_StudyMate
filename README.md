@@ -385,6 +385,81 @@ AI Output (using Chain-of-Thought Prompting):
 
 
 
+
+
+## 📐 Cosine Similarity
+
+Cosine Similarity is a mathematical technique used to measure the similarity between two vectors by calculating the cosine of the angle between them. In the context of AI and StudyMate, Cosine Similarity is often applied to compare text embeddings, which represent the meaning of words, sentences, or queries in numerical form.
+
+When the angle between two vectors is small, the Cosine Similarity value is close to 1, meaning the texts are highly similar. If the angle is large, the Cosine Similarity approaches 0, meaning the texts are very different.
+
+By leveraging Cosine Similarity, StudyMate can:
+
+Match student queries with the most relevant concepts
+
+Retrieve learning materials based on semantic similarity
+
+Support Retrieval-Augmented Generation (RAG) for more accurate answers
+
+#### 🔹 How StudyMate Uses Cosine Similarity
+
+Converts student queries into embeddings using a language model.
+
+Converts knowledge base entries (roadmaps, concepts, comparisons) into embeddings as well.
+
+Uses Cosine Similarity to find which stored entry is closest to the query.
+
+Returns the most relevant explanation, roadmap, or comparison to the student.
+
+This makes Cosine Similarity in StudyMate a powerful tool for semantic search and context-aware learning.
+
+#### 📘 Example of Cosine Similarity
+
+Query 1:
+
+Explain recursion
+
+
+Query 2:
+
+What does it mean when a function calls itself?
+
+
+Cosine Similarity Calculation (Simplified):
+
+Embedding(Query 1) = [0.2, 0.8, 0.5]
+
+Embedding(Query 2) = [0.3, 0.7, 0.4]
+
+Cosine Similarity Score:
+
+cosine_similarity = 0.98  (very similar)
+
+
+AI Output (using Cosine Similarity):
+
+{
+  "query": "What does it mean when a function calls itself?",
+  "matched_concept": "Recursion",
+  "similarity_score": 0.98,
+  "answer": "Recursion is when a function calls itself to solve smaller parts of a problem until a base case is reached."
+}
+
+#### 🎯 Why Cosine Similarity Matters in StudyMate
+
+✅ Cosine Similarity improves search → Finds the most relevant answers even when queries are worded differently.
+
+✅ Cosine Similarity enhances personalization → Matches learning materials to student phrasing.
+
+✅ Cosine Similarity supports semantic understanding → Goes beyond keywords to capture actual meaning.
+
+✅ Cosine Similarity strengthens RAG workflows → Ensures accurate retrieval before generating answers.
+
+👉 With Cosine Similarity, StudyMate becomes smarter at understanding and matching student queries, ensuring responses are always context-aware and highly relevant.
+
+
+
+
 Conclusion
 
 StudyMate brings together advanced AI techniques—prompt engineering for personalized guidance, structured outputs for clarity, function calling for modular learning workflows, and optional retrieval-augmented generation for enhanced accuracy.
