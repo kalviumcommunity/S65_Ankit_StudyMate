@@ -113,6 +113,72 @@ AI Output (Zero-Shot):
 
 
 
+
+
+## 🎓 One-Shot Prompting
+
+One-Shot Prompting is a prompting technique where the AI is guided using a single example before answering the actual query. In One-Shot Prompting, the model is shown one reference interaction so it clearly understands the expected response style, format, and level of detail.
+
+By giving the AI just one example, One-Shot Prompting ensures that responses are:
+
+Structured in a consistent format
+
+Clear and beginner-friendly
+
+Adaptable to different types of student queries
+
+This makes One-Shot Prompting highly effective for building reliable and reusable educational outputs in StudyMate.
+
+🔹 How StudyMate Uses One-Shot Prompting
+
+System Prompt → Defines the AI’s role as a teaching assistant.
+
+One Example → Provides a sample query-response pair to guide output style.
+
+User Query → Contains the actual question from the student.
+
+The AI then applies One-Shot Prompting to mirror the example and produce a matching response.
+
+With this method, One-Shot Prompting in StudyMate ensures that every explanation, roadmap, or comparison follows a predictable and student-friendly pattern.
+
+📘 Example of One-Shot Prompting
+
+System + Example Prompt:
+
+You are an AI tutor. Always answer in JSON format.
+
+Example:  
+Query: "What is Polymorphism in Java?"  
+Answer: { "response_type": "explanation", "answer": "Polymorphism means the ability of an object to take many forms. In Java, it allows methods to perform different tasks based on the object that is calling them." }
+
+
+User Query:
+
+Explain Inheritance in Java
+
+
+AI Output (using One-Shot Prompting):
+
+{
+  "query": "Explain Inheritance in Java",
+  "response_type": "explanation",
+  "answer": "Inheritance is a mechanism in Java where one class (child/subclass) can use the fields and methods of another class (parent/superclass). This promotes reusability and code organization."
+}
+
+#### 🎯 Why One-Shot Prompting Matters in StudyMate
+
+✅ One-Shot Prompting provides clarity → The AI knows exactly how to answer.
+
+✅ One-Shot Prompting enforces structure → Outputs remain consistent and easy to read.
+
+✅ One-Shot Prompting improves reliability → Answers stay aligned with the required format.
+
+✅ One-Shot Prompting balances efficiency → A single example is enough to guide the AI effectively.
+
+👉 With One-Shot Prompting, StudyMate delivers structured, accurate, and student-friendly responses across all kinds of learning queries.
+
+
+
 Conclusion
 
 StudyMate brings together advanced AI techniques—prompt engineering for personalized guidance, structured outputs for clarity, function calling for modular learning workflows, and optional retrieval-augmented generation for enhanced accuracy.
