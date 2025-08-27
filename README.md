@@ -255,6 +255,75 @@ AI Output (using Multi-Shot Prompting):
 
 
 
+
+
+## ⚡ Dynamic Prompting
+
+Dynamic Prompting is a prompting technique where the AI’s instructions are adapted in real time based on the user’s query and context. Unlike static prompts that remain fixed, Dynamic Prompting allows StudyMate to customize the system and user prompts depending on whether the student is asking for an explanation, a roadmap, or a comparison.
+
+By continuously adapting the prompts, Dynamic Prompting ensures that responses are:
+
+Tailored to the student’s exact learning needs
+
+Context-aware and flexible
+
+Able to switch seamlessly between different response types
+
+This makes Dynamic Prompting one of the most powerful techniques in StudyMate, as it allows the AI to behave more like a personalized mentor than a static chatbot.
+
+#### 🔹 How StudyMate Uses Dynamic Prompting
+
+System Prompt → Adjusts to highlight the AI’s role (e.g., “Explain concepts like a teacher” or “Provide step-by-step roadmap”).
+
+Dynamic Instructions → Change depending on the type of query (explanation, roadmap, summary, or comparison).
+
+User Query → Drives the context so the AI generates the most useful and structured response.
+
+With Dynamic Prompting, StudyMate can shift on the fly, producing the right format at the right time.
+
+#### 📘 Example of Dynamic Prompting
+
+User Query:
+
+Give me a roadmap for learning Web Development
+
+
+Dynamic Prompt Generated Internally:
+
+You are an AI tutor. The student has asked for a learning roadmap.  
+Always provide the answer in JSON format with a 'response_type' of 'roadmap' and a list of ordered steps.  
+
+
+AI Output (using Dynamic Prompting):
+
+{
+  "query": "Give me a roadmap for learning Web Development",
+  "response_type": "roadmap",
+  "steps": [
+    "Learn the basics of HTML, CSS, and JavaScript",
+    "Understand responsive design and CSS frameworks",
+    "Practice DOM manipulation and JavaScript fundamentals",
+    "Learn a frontend library like React",
+    "Explore backend basics with Node.js and Express",
+    "Understand databases like MongoDB or SQL",
+    "Build full-stack projects to consolidate learning"
+  ]
+}
+
+#### 🎯 Why Dynamic Prompting Matters in StudyMate
+
+✅ Dynamic Prompting personalizes learning → Adjusts outputs based on the student’s specific query.
+
+✅ Dynamic Prompting improves versatility → Works equally well for explanations, roadmaps, and comparisons.
+
+✅ Dynamic Prompting enhances clarity → Each response is structured for maximum readability.
+
+✅ Dynamic Prompting ensures adaptability → The system evolves with different use cases and learning goals.
+
+👉 With Dynamic Prompting, StudyMate becomes a flexible and intelligent AI tutor, capable of shaping its responses to match the unique needs of every learner.
+
+
+
 Conclusion
 
 StudyMate brings together advanced AI techniques—prompt engineering for personalized guidance, structured outputs for clarity, function calling for modular learning workflows, and optional retrieval-augmented generation for enhanced accuracy.
