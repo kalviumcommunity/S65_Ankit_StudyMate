@@ -324,6 +324,67 @@ AI Output (using Dynamic Prompting):
 
 
 
+
+
+## 🧩 Chain-of-Thought Prompting
+
+Chain-of-Thought Prompting is a prompting technique where the AI is guided to show its reasoning process step by step before giving the final answer. Instead of jumping directly to a conclusion, Chain-of-Thought Prompting encourages the AI to break down the problem into logical, smaller steps, making the answer more reliable and transparent.
+
+By using Chain-of-Thought Prompting, StudyMate can generate responses that are:
+
+Easier for students to follow
+
+Structured with intermediate reasoning
+
+More accurate for complex problem-solving tasks
+
+This makes Chain-of-Thought Prompting especially useful in subjects like Mathematics, DSA, and Algorithmic Thinking, where step-by-step clarity is essential.
+
+#### 🔹 How StudyMate Uses Chain-of-Thought Prompting
+
+System Prompt → Instructs the AI to explain concepts step by step like a teacher.
+
+Reasoning Steps → Encourage the AI to break down its thought process into smaller, understandable chunks.
+
+Final Answer → Presented clearly after the reasoning steps for easy student comprehension.
+
+With Chain-of-Thought Prompting, StudyMate doesn’t just give an answer — it teaches the reasoning behind the answer.
+
+#### 📘 Example of Chain-of-Thought Prompting
+
+User Query:
+
+What is the time complexity of Binary Search?
+
+
+AI Output (using Chain-of-Thought Prompting):
+
+{
+  "query": "What is the time complexity of Binary Search?",
+  "response_type": "explanation",
+  "reasoning_steps": [
+    "Binary Search works by repeatedly dividing the array into halves.",
+    "In each step, the search space reduces from n to n/2, then n/4, and so on.",
+    "This continues until the search space becomes 1."
+  ],
+  "final_answer": "The time complexity of Binary Search is O(log n)."
+}
+
+#### 🎯 Why Chain-of-Thought Prompting Matters in StudyMate
+
+✅ Chain-of-Thought Prompting promotes clarity → Students see the reasoning, not just the result.
+
+✅ Chain-of-Thought Prompting strengthens learning → Step-by-step logic improves concept understanding.
+
+✅ Chain-of-Thought Prompting improves accuracy → Reduces mistakes in complex topics by reasoning carefully.
+
+✅ Chain-of-Thought Prompting builds confidence → Students can verify and trust the AI’s explanations.
+
+👉 With Chain-of-Thought Prompting, StudyMate transforms from simply giving answers into teaching the reasoning process, helping learners develop problem-solving skills alongside knowledge.
+
+
+
+
 Conclusion
 
 StudyMate brings together advanced AI techniques—prompt engineering for personalized guidance, structured outputs for clarity, function calling for modular learning workflows, and optional retrieval-augmented generation for enhanced accuracy.
