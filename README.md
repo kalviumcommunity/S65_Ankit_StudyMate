@@ -66,6 +66,53 @@ Retrieved documents are combined with the user’s query for more context-aware 
 This ensures roadmaps and explanations stay aligned with industry best practices.
 
 
+
+
+
+
+🚀##  Zero-Shot Prompting
+
+Zero-Shot Prompting is one of the core techniques behind StudyMate’s learning capabilities.
+In this approach, the AI is asked to perform a task (like explaining a topic or generating a roadmap) without being given predefined examples.
+
+Instead of relying on sample inputs and outputs, the model directly interprets the student’s query and generates a response purely from the instructions provided in the prompt.
+
+🔹 How StudyMate Uses Zero-Shot Prompting
+
+System Prompt → Defines the AI’s role as a teaching assistant that explains concepts in a beginner-friendly way.
+
+User Prompt → Carries the student’s query (e.g., “Explain me OOP in Java”).
+
+The AI uses only these instructions to generate structured, useful answers — without needing prior examples.
+
+📘 Example
+
+User Query:
+
+Explain Recursion in simple terms
+
+
+AI Output (Zero-Shot):
+
+{
+  "query": "Explain Recursion in simple terms",
+  "response_type": "explanation",
+  "answer": "Recursion is when a function calls itself to solve a smaller version of the problem, until it reaches a simple base case. For example, calculating factorial (n!) can be done by multiplying n with factorial of (n-1)."
+}
+
+🎯 Why Zero-Shot Prompting Matters in StudyMate
+
+✅ Flexible → Works for any subject or topic without retraining
+
+✅ Adaptive → Instantly switches between explanations, roadmaps, and comparisons
+
+✅ Scalable → Handles diverse queries from students without predefined examples
+
+👉 With Zero-Shot Prompting, StudyMate becomes a universal study assistant, capable of answering a wide range of academic questions on the fly.
+
+
+
+
 Conclusion
 
 StudyMate brings together advanced AI techniques—prompt engineering for personalized guidance, structured outputs for clarity, function calling for modular learning workflows, and optional retrieval-augmented generation for enhanced accuracy.
