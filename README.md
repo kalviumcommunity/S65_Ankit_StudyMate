@@ -1,12 +1,12 @@
-StudyMate – AI-Powered Learning Assistant
-Project Overview
+# StudyMate – AI-Powered Learning Assistant
+## Project Overview
 
 StudyMate is an AI-powered educational chatbot designed to help students learn faster and more effectively. It provides instant, personalized responses to questions across a wide range of subjects. Students can ask queries such as “What is Java?”, “Explain me DSA”, or “Give me a roadmap for learning Web Development”, and StudyMate delivers clear, structured, and beginner-friendly explanations.
 
 By combining conversational AI with roadmap guidance, StudyMate acts like a personal mentor, helping learners explore new topics, clarify concepts, and stay on track with their study goals. This makes it ideal for students, self-learners, and educators who want quick, reliable, and AI-assisted learning support.
 
-Key Concepts Implementation
-1. Prompting
+### Key Concepts Implementation
+#### 1. Prompting
 
 Prompting is central to StudyMate’s ability to generate accurate educational responses.
 
@@ -16,7 +16,7 @@ The user prompt includes the student’s query (e.g., “Give me a roadmap of Ja
 
 Dynamic prompt engineering ensures that responses are tailored — whether it’s an explanation, a roadmap, or a step-by-step learning plan.
 
-2. Structured Output
+#### 2. Structured Output
 
 StudyMate provides answers in structured formats for clarity and usability:
 
@@ -43,7 +43,7 @@ Example structure:
 
 This structure supports both chat UI rendering and exporting roadmaps/explanations for later use.
 
-3. Function Calling
+#### 3. Function Calling
 
 StudyMate uses function calls to enhance learning workflows:
 
@@ -55,7 +55,7 @@ compare_topics(a, b) – highlights differences between two concepts (e.g., Java
 
 This modular design ensures flexibility and reusability in responses.
 
-4. Retrieval-Augmented Generation (RAG) (Optional Enhancement)
+#### 4. Retrieval-Augmented Generation (RAG) (Optional Enhancement)
 
 To make answers more accurate and up-to-date, StudyMate can integrate with external knowledge bases, documentation, or curated learning resources.
 
@@ -65,6 +65,34 @@ Retrieved documents are combined with the user’s query for more context-aware 
 
 This ensures roadmaps and explanations stay aligned with industry best practices.
 
+
+
+
+## System-User Prompt
+
+In System-User Prompting, the AI is guided using two distinct roles:
+
+System Prompt: Provides the overall instructions, context, and boundaries for how the AI should behave.
+
+User Prompt: Contains the actual task or question that the user wants solved.
+
+This structure ensures that the AI remains consistent, reliable, and aligned with the intended purpose, while still being flexible enough to handle user-specific queries.
+
+#### 🔹 System-User Prompt Example
+
+System Prompt:
+You are a helpful AI assistant that explains programming concepts in simple terms.
+
+User Prompt:
+Explain the difference between synchronous and asynchronous code in JavaScript with a short example.
+
+#### 📌 Why System-User Prompting?
+
+Clear Separation of Roles: Keeps instructions and tasks organized.
+
+Consistency: The system defines rules that always apply, while the user gives context-specific requests.
+
+Flexibility: Works well across diverse domains while maintaining structure.
 
 
 
