@@ -179,6 +179,82 @@ AI Output (using One-Shot Prompting):
 
 
 
+
+
+## 📚 Multi-Shot Prompting
+
+Multi-Shot Prompting is a prompting technique where the AI is guided using multiple examples before answering the actual query. In Multi-Shot Prompting, the model sees several reference interactions, which helps it better understand the expected response style, output format, and level of detail across different scenarios.
+
+By providing the AI with multiple examples, Multi-Shot Prompting ensures that responses are:
+
+More accurate and context-aware
+
+Consistently structured across different topics
+
+Adaptable to complex or varied student queries
+
+This makes Multi-Shot Prompting highly effective for cases where students ask diverse questions and we want the AI to produce reliable and reusable educational outputs every time.
+
+#### 🔹 How StudyMate Uses Multi-Shot Prompting
+
+System Prompt → Defines the AI’s role as a teaching assistant.
+
+Multiple Examples → Provide 2–3 sample query-response pairs to guide the output style.
+
+User Query → Contains the actual question from the student.
+
+The AI then applies Multi-Shot Prompting to mirror the examples and generate a structured, student-friendly response.
+
+With this method, Multi-Shot Prompting in StudyMate ensures maximum clarity and consistency, especially when handling more advanced or varied learning requests.
+
+#### 📘 Example of Multi-Shot Prompting
+
+System + Multiple Examples Prompt:
+
+You are an AI tutor. Always answer in JSON format.
+
+Example 1:  
+Query: "What is Polymorphism in Java?"  
+Answer: { "response_type": "explanation", "answer": "Polymorphism means the ability of an object to take many forms. In Java, it allows methods to perform different tasks based on the object that is calling them." }
+
+Example 2:  
+Query: "Give me a roadmap for learning DSA"  
+Answer: { "response_type": "roadmap", "steps": ["Start with arrays and strings", "Learn recursion and problem-solving patterns", "Study time and space complexity", "Move on to stacks, queues, and linked lists", "Explore trees, graphs, and algorithms"] }
+
+
+User Query:
+
+Compare Java and Python
+
+
+AI Output (using Multi-Shot Prompting):
+
+{
+  "query": "Compare Java and Python",
+  "response_type": "comparison",
+  "points": [
+    "Java is statically typed, while Python is dynamically typed",
+    "Java is widely used for enterprise applications, Python is popular in AI/ML and scripting",
+    "Python code is generally shorter and more readable, Java offers strict structure and performance"
+  ]
+}
+
+#### 🎯 Why Multi-Shot Prompting Matters in StudyMate
+
+✅ Multi-Shot Prompting provides diversity → The AI learns from multiple styles of responses.
+
+✅ Multi-Shot Prompting enforces consistency → Structured answers are maintained across different query types.
+
+✅ Multi-Shot Prompting improves accuracy → More examples reduce chances of vague or incorrect answers.
+
+✅ Multi-Shot Prompting enhances adaptability → Complex topics and varied tasks are handled with precision.
+
+👉 With Multi-Shot Prompting, StudyMate delivers highly reliable, detailed, and structured responses across explanations, roadmaps, and comparisons.
+
+
+
+
+
 Conclusion
 
 StudyMate brings together advanced AI techniques—prompt engineering for personalized guidance, structured outputs for clarity, function calling for modular learning workflows, and optional retrieval-augmented generation for enhanced accuracy.
